@@ -1,0 +1,65 @@
+<html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="res/css/foundation.css" />
+    <script src="res/js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+<br>
+<div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+  <h2>Hi Creode! Here are the most recent posts on your Facebook wall.</h2>
+        </div>
+      </div>
+    </div>
+
+
+
+  <!-- Display posts -->
+  {% for post in posts %}
+
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <div class="row">
+            <h3> {{ post.from.name }} posted: </h3>
+            <br>
+            {{ post.message }}
+            <br>
+            Likes: {{post.likes.data|length}}
+            <br>
+            {% if post.link is defined %}
+               <a href="{{ post.link }}">{{ post.name }}</a>  
+            {% endif %}
+            <br>
+            {% if post.picture is defined %}
+               <img src="{{post.picture}}" alt="Mountain View">
+            {% endif %}
+
+            <p><small>{{post.created_time}}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <p>
+
+  </p>
+  {% endfor %}
+
+      <script src="res/js/vendor/jquery.js"></script>
+    <script src="res/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+
+    
+
+</html>
