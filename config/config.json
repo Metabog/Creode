@@ -1,9 +1,9 @@
 {
-  "dbhost": 423423,
+  "dbhost": "creode.czogp59wts6u.eu-west-1.rds.amazonaws.com",
   "dbport": 5432,
-  "dbname": "wat",
-  "dbuser": "bv",
-  "dbpassword": "uwatm8",
+  "dbname": "creode",
+  "dbuser": "creode",
+  "dbpassword": "creodecreode",
   "fb_appid": 413314302012055,
   "fb_secret": "9908c949cd6136eec10ee122a2ab6a37"
 }
